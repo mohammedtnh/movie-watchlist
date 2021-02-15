@@ -17,6 +17,7 @@ export const addMovie = (newMovie) => {
 };
 
 export const updateMovie = (updatedMovie) => {
+  updatedMovie.watched = !updatedMovie.watched;
   return {
     type: UPDATE_MOVIE,
     payload: { updatedMovie: updatedMovie },
